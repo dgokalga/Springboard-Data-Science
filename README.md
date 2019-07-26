@@ -1,2 +1,2 @@
 # Springboard-Data-Science
-Springboard Data Science Mini-Projects
+Springboard Data Science Capstone and Mini-Projects

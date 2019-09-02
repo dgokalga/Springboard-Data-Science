@@ -1,6 +1,8 @@
 #
 # Springboard Data Science Capstone Project 1 – Predicting the Price of an Uber/Lyft Ride
 
+[Project Report](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-1/Capstone1_Final_Report.pdf)
+
 ## **Data Problem**
 
 Uber and Lyft have dominated the ride-sharing industry in recent times, with combined over a 100 millions active users around the world. You can book rides easily from your phone, selecting the pickup and dropoff location, selecting the type of ride (whether it&#39;s a four-seater, six-seater, luxury car, SUV, etc.), and tracking the car to see when the driver arrived. This beats having to call a taxi service, and not knowing when the taxi would arrive from pickup. But a major factor that drove demand for Uber and Lyft over taxi services has been the price of the ride.

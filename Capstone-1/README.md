@@ -2,7 +2,9 @@
 # Springboard Data Science Capstone Project 1 – Predicting the Price of an Uber/Lyft Ride
 
 [Slide Deck](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-1/Capstone1_Slides.pdf)
+
 [Blog Post](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-1/Capstone1_blog.pdf)
+
 [Project Report](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-1/Capstone1_Final_Report.pdf)
 
 ## **Data Problem**

@@ -1,4 +1,5 @@
-**Springboard Data Science Capstone Project 2 – Recommendation System for Video Games**
+#
+# Springboard Data Science Capstone Project 2 – Recommendation System for Video Games
 
 [Slide Deck](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-2/Capstone2_Slides.pdf)
 
@@ -6,7 +7,7 @@
 
 [Project Report](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-2/Capstone2_Final_Report.pdf)
 
-**Data Problem**
+## **Data Problem**
 
 Currently, approximately 2.2 billion gamers worldwide exist (a third of the world’s population!), with that number expected to rise to 2.7 by 2021. Often then not, a common issue that arises for gamers, with and without a rich gaming history, is deciding what to play next. Perhaps we want to enjoy games most similar to our previously played games, but how can we comprise a list of games to achieve that. Maybe be can look at other users’ histories with games and decipher whether we would also enjoy games played by these other users.  
 Just like with TV and movies, games exhibit qualities and concepts that databases have taken note of and stored, as well as, other user’s ratings and reviews for these games, which can be utilized to decide which game to play next. Recommendation systems opt to alleviate this issue of deciding which games to play, by providing a list of games that the user will most likely enjoy based on previously played games and the history of similar users. The recommendation system is built on two main components: content based filtering and collaborative based filtering.  
@@ -15,26 +16,25 @@ The idea behind content-based filtering is that the system will recommend games,
 
 The idea behind collaborative-based filtering is that the system will predict ratings for unrated games based on the taste of similar users. For example, if I enjoy the game Halo (rating it 5 star), and you enjoy the games Halo and Mario Party (rating them a 5 star), I will most likely enjoy Mario Party. The filtering method will rely of model-based approaches, such as clustering algorithms and matrix factorization algorithms, to predict ratings for unrated games.  
 
-**Potential Clients**
+## **Potential Clients**
 
 My target audiences are:
 
-  Avid Gamers who have trouble determining which games to play next, or find enjoyment with games similar to the ones that they enjoy.
+Avid Gamers who have trouble determining which games to play next, or find enjoyment with games similar to the ones that they enjoy.
 
-**Dataset Description**
+## **Dataset Description**
 
   24023 game reviews were extracted from the API provided by the largest gaming database online, [GiantBomb](https://www.giantbomb.com/). 
 
   User ratings, on a scale of 0-5, are given from a total of 6561 users to 4223 games, ranging from July 2008 to September 2019. Database also provided game features: genres, themes, concepts, platforms, developers, publishers, developers, short and long game description. Luckily, an additional feature, “similar-games”, provides a list of games that GiantBomb deemed similar to the target game. This feature will be used to evaluate how the content-based filtering system recommends games.  
 
-**Wrangling Steps**
+## **Wrangling Steps**
 
   1. All of the game feature names were nested within lists, which included API links and unique feature ids. Only the names were extracted from these lists, as there can be more than one feature name for each game, as these will be involved in the TF-IDF implementation in finding similarities between game content. Names with spaces between their words, such as the genre “First Person Shooter”, were connected with a dash to prevent splitting of descriptive words: “First-Person-Shooter”. HTML tags and stopwords (commonly used words) were removed from the user review features and game descriptions to keep the unique and informative words that describe each game. All descriptive feature values were converted to lower-case, to prevent duplicates of different case lettering. Any ‘s’ or ‘ies’ were removed from word endings, in order to convert plural cases to singular, and lessen the duplicates of plural and singular case letterings There were 1417 reviews missing a value for the ‘similar games’ feature, approximately 5% of the data, which were omitted. 
 
   2. While all game reviews were given a score from 0 to 5 (whole number), two reviews were given a score of 0.5, for which many of the content and user features were given the value ‘test’, and as a result, removed from the dataset. All other missing values were replaced with an empty space and ready to be merged to create a ‘bag of words’ instance, which will be used in the TF-IDF implementation. To ensure that the evaluator feature, ‘similar games’, list only included games from the reviews, games that were identified to not be part of the list of total unique games (games which cannot be recommended) were removed from each “similar games” list. This process was repeated until each review record’s ‘similar games’ list had at least one game that can be found in the list of total unique games in the dataset. After the removal process, approximately 1500 review records had no games within their ‘similar games’ feature, and were omitted from the final dataset. After the wrangling process, the final dataset contains 22866 reviews from 3592 users on 4220 games.
 
-
-**Data Exploration Insights**
+## **Data Exploration Insights**
 
 To summarize the findings from the exploratory data analysis of the game review data:
 
@@ -50,7 +50,7 @@ To summarize the findings from the exploratory data analysis of the game review 
 
   Details on the implementation of the data analysis and visualization can be found in [this](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-2/Capstone2_EDA.ipynb) IPython notebook.
 
-**Predictive Modeling Insights**
+## **Predictive Modeling Insights**
 
   To summarize the findings from the predictive modeling for the implementation of the recommender system:
 
@@ -60,7 +60,7 @@ To summarize the findings from the exploratory data analysis of the game review 
 
   Details on the implementation of the modeling and analysis can be found in [this](https://github.com/dgokalga/Springboard-Data-Science/blob/master/Capstone-2/Capstone2_Modeling.ipynb) IPython notebook.
 
-**Future Work**
+## **Future Work**
 
   For the content-based filtering method, while the game features provide substantial information in describing each of the 4223 unique games, the recommendations can always expand with added new games and their game information. A new evaluator list for the recommendations should also be determined, possibly through surveying gamers to determine what they feel are the most similar games to the games they have played, and strengthening how accurate the system will recommend games. Multiple surveys of similar games should provide enough evidence to determine a consensus list of similar games that can be used to evaluate the system. 
 

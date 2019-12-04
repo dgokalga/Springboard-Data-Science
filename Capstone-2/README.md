@@ -21,13 +21,13 @@ My target audiences are:
 
   Avid Gamers who have trouble determining which games to play next, or find enjoyment with games similar to the ones that they enjoy.
 
-## **Dataset Description**
+**Dataset Description**
 
   24023 game reviews were extracted from the API provided by the largest gaming database online, [GiantBomb](https://www.giantbomb.com/). 
 
   User ratings, on a scale of 0-5, are given from a total of 6561 users to 4223 games, ranging from July 2008 to September 2019. Database also provided game features: genres, themes, concepts, platforms, developers, publishers, developers, short and long game description. Luckily, an additional feature, “similar-games”, provides a list of games that GiantBomb deemed similar to the target game. This feature will be used to evaluate how the content-based filtering system recommends games.  
 
-**Wrangling Steps
+**Wrangling Steps**
 
   1. All of the game feature names were nested within lists, which included API links and unique feature ids. Only the names were extracted from these lists, as there can be more than one feature name for each game, as these will be involved in the TF-IDF implementation in finding similarities between game content. Names with spaces between their words, such as the genre “First Person Shooter”, were connected with a dash to prevent splitting of descriptive words: “First-Person-Shooter”. HTML tags and stopwords (commonly used words) were removed from the user review features and game descriptions to keep the unique and informative words that describe each game. All descriptive feature values were converted to lower-case, to prevent duplicates of different case lettering. Any ‘s’ or ‘ies’ were removed from word endings, in order to convert plural cases to singular, and lessen the duplicates of plural and singular case letterings There were 1417 reviews missing a value for the ‘similar games’ feature, approximately 5% of the data, which were omitted. 
 
